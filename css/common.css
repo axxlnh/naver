@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+
+/* skip-menu */
+.skip-menu {
+    position: relative;
+    z-index: 999;
+}
+
+/* 포지션으로 잡는 방법
+.skip-menu li a {
+    position: absolute;
+    top: -50px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+} */
+
+/* .skip-menu li a:focus {
+    top: 0px;
+} */
+
+/* 영역으로 잡는 방법 */
+.skip-menu li a {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1px;
+    height: 1px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 0px;
+    font-size: 0px;
+}
+
+.skip-menu li a:focus {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+
+/* thum */
+.thum-bg {
+    overflow: hidden;
+}
+
+.thum-bg img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 250ms;
+    /* 
+    object-fit
+    이미지나 비디오 태그에 사용하는 이미지 사이즈 설정요소 css3
+    background-size: cover,contain과 같은 기능
+    익스는 지원되지 않음
+
+    fill:(기본값) 주어진 너비와 높이에 딱 맞도록 설정 비율은 유지되지 않음
+
+    cover: 가로세로 비율 유지한 채 사이즈 조절
+    (비율은 맞춰주지만 컨테이너의 사이즈의 맞지 않는다면 사진이 잘린다.)
+    
+    contain: 가로세로 비율 유지한 채 사이즈 조절
+    (비율을 맞춰주면서 컨테이너의 사이즈랑 맞지 않는다면 영역을 비워 남긴다.)
+    
+    none: 아무것도 하지 않고 이미지 사이즈 유지
+    scale-down: none이랑 contain 중에서 적정한 것을 찾아서 적용
+    */
+}
+
+.thum-bg:hover img {
+    transform: scale(1.05);
+}
+
+
+/* body */
+body {
+    font-size: 12px;
+    line-height: 18px;
+    font-family:  -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', 'Helvetica', sans-serif;
+    color: #202020;
+}
+
+
+/* header */
+.h-top-wrap .logo a:after,
+.search-wrap .search-btn:after, 
+.search-wrap .auto-btn:after,
+.search-wrap .keyboard-btn:after,
+.t-menu-wrap .link-start:after,
+.t-menu-wrap .link-junior:after,
+.t-menu-wrap .link-happy:after,
+.gnb .gnb-list01 .gnb-item .icon-mail:before,
+.gnb .gnb-list01 .gnb-item .icon-shop:after,
+.gnb .gnb-list01 .gnb-item .icon-live:after,
+.gnb .gnb-list01 .gnb-item .icon-tv:before,
+.gnb .gnb-more-btn:after,
+.weather-wrap .wt-item .level02:before,
+.weather-wrap .wt-item .level03:before,
+.headline-list .headline .h-tit:after,
+.news-menu .news-title:before,
+.news-menu .news-title:after,
+.news-list .set-list .icon-list:after, 
+.news-list .set-list .icon-tile:after,
+.news-list .set-list .icon-set:after,
+.media-wrap .prev-btn:after, 
+.media-wrap .next-btn:after,
+.post-list-box .set-btn:before,
+.item-box button:after,
+.layout01 .icon-play,
+.content-list03 .funding-title > a:after,
+.more-btn-wrap .more-btn:before,
+.login-wrap .login-link .icon-naver,
+.login-wrap .login-link-box .login-id:before,
+.login-link-box .join-link:before,
+.cardnews-wrap .card-link-box .card-info:before,
+.cardnews-wrap .nav-box button:after,
+.notice-wrap .link-sitemap:after,
+.fix-btn .btn-mode:after,
+.fix-btn .btn-top:after {
+    background-image: url(../images/sp_main_947f65.png);
+    background-repeat: no-repeat;
+    background-size: 442px;
+}/* 
+-스프라이트 이미지란, 홈페이지에 들어가는 로고나 버튼들을 하나의 이미지에
+통째로 넣어서 사용하는 이미지이다. 이미지를 하나씩 만들어서 넣으면 이미지수가
+많아지기 때문에 홈페이지가 무거워지고 렉이 걸린다.
+
+-스프라이트 이미지는 2배수나 4배수로 제작된다 그래야 이미지가 깨지지 않기 때문에
+그래서 코딩에 넣을 때는 2배수 만큼 줄여서 크기 값을 계산해야한다. */
+
+.trend-wrap .trend-list .title:before,
+.trend-wrap .trend-list .title:after,
+.btn-box button:after,
+.deal-list .deal-title .title a:before,
+.deal-list .deal-item-list .icon-plus,
+.deal-list .deal-item-list .thum-bg:first-of-type:before  {
+    background-image: url(../images/sp_shop_359e62.png);
+    background-repeat: no-repeat;
+    background-size: 129px;
+}

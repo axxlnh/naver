@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/* v2.0 | 20110126
+    http://meyerweb.com/eric/tools/css/reset/ 
+    License: none (public domain)
+*/
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    color: #222222;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+a {
+    text-decoration: none;
+}
+ol, ul {
+    list-style: none;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 리더기에 읽히면서 콘텐츠 가리는 blind */
+.blind {
+    position: absolute; 
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    z-index: -1;
+    border: none;
+}
+
+/* HTML5 display-role reset for older browsers reset */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input,button {
+    border: none;
+    background: transparent;
+}
+
+button {
+    cursor: pointer;
+}
